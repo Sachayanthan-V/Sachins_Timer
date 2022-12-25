@@ -1,0 +1,380 @@
+/*
+
+This Styling sheet is to styling function for index.html [root] file 
+named index.css based on linking to the root file according to its
+name.  Below I have mentioned features for reference. If any doubts
+please contact us.
+
+=====================================================================
+
+            -------------------------------------------------
+            |            Development Details :              |
+            -------------------------------------------------
+            |   Author : Sachayanthan V [ created By ]      |
+            |   Email : sachayanthan.v.1999@gmail.com       |
+            |   Date Modified : 24-Dec-2022                 |
+            -------------------------------------------------
+
+=====================================================================
+
+
+  Features Included : 
+
+    * Compactible for most browsers
+    * Mostly used relative units for responsible design
+    * Minimum screen size needs to 400 pixels [ It means, it will work 
+              fine about and equal to 400 pixels screens ]
+    * Visibilities of timers are simple and ease to understand
+    * Little animations added like hovering effects on buttons
+              website name header.
+    * Clocks for each different notations like, seconds timer, 
+              hour timer, minutes, days and year timers are 
+              handled seperately as well individually
+              for some speacific functionalities
+    * Animation effects will appear for all timers whenever any 
+              changes occurs to that particular timers. This logic
+              is maintained through JS [ javascript file ] named index.js
+    * Mostly elements and container using flex display property.
+    * Added additional dummy spaceprovider division named [madeforspace]
+              to add space additionally on visibility to seems steps 
+              like feature of buttons.
+
+*/
+
+
+
+/* 
+  Setting all elements default behaviour of padding and margin to zero 
+  [ * - Select All Elements ] 
+*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/* Making whole body content sytling and its children positions using flex */
+body {
+  width: 100vw;
+  height: 99vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #1a1222;
+  background: url(./photo-1530533718754-001d2668365a.avif);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-attachment: cover;
+}
+
+/* 
+  Header is the Website name and logo holder Currently
+  not added any logo, and its position to absolute, with
+  z-index to 1 to appear always top of any element at any position
+  with any screen size.
+*/
+header {
+  position: absolute;
+  top: 0px;
+  left: auto;
+  color: white;
+  font-size: 1.3em;
+  background-color: #060b28;
+  padding: 1.5em;
+  border: 1px solid white;
+  border-radius: 1em;
+  z-index: 1;
+}
+
+/*  Colon Seperator in middle of each timer's made color 
+is white and relative font size to 3em */
+#colonSeperator {
+  color: white;
+  font-size: 3em;
+}
+
+/* 
+  Making whole main content sytling and 
+   its children positions using flex 
+   Added a background image and opacity of .9
+*/
+main {
+  margin-top: 4%;
+  width: 50%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url(./photo-1530533718754-001d2668365a.avif);
+  -webkit-box-shadow: 0px 0px 30px #2d1543;
+          box-shadow: 0px 0px 30px #2d1543;
+  opacity: 0.9;
+  border-radius: 15px;
+  border: 1px solid whitesmoke;
+}
+
+
+/* Timer Container with flex for children and size of 905 of parent */
+main #timer {
+  width: 90%;
+  height: 70%;
+  margin-bottom: 15px;
+  margin-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+}
+
+
+/* Alinments of quantities which we mentoined below */
+main #timer .boxContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Alinments of quantities which we mentoined below
+with background color of those containers */
+main #timer .boxContainer .roundTimer {
+  opacity: 100%;
+  margin: 0px 20px;
+  border-radius: 5px;
+  width: 90%;
+  height: 180px;
+  background-color: rgba(80, 49, 154, 0.8);
+  padding: 15px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  border: 1px solid whitesmoke;
+  -webkit-box-shadow: 0px 0px 20px whitesmoke;
+          box-shadow: 0px 0px 20px whitesmoke;
+}
+
+/* fixing font-size relatively to those ID's */
+main #timer .boxContainer .roundTimer .ActualTimer {
+  font-size: 5em;
+}
+
+/* 
+  Fixing font-size relatively to those ID's
+  and positioned relative with text color added
+  for texts like [ seconds, minutes ] under every timers.
+*/
+main #timer .boxContainer .roundTimer .timeHeaders {
+  position: relative;
+  font-size: 1em;
+  color: #eecaca;
+}
+
+
+/* Setting width of those containers to 25% of parent size */
+main #timer .boxContainer #yearContainer, main #timer .boxContainer #daysContainer {
+  width: 22%;
+}
+
+/* 
+  Adding styling property to the controllers which is holding 
+  a buttons into it include padding and margin effect to not 
+  sit on corners
+*/
+main #controllers {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  margin-left: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* 
+  setting button holders display positioned
+  which is holding buttons as well as dummy
+  space provider div's [madeforspace].
+*/
+main #controllers .buttonholders {
+  margin-top: 10px;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+
+/* Setting width to 20% of its parents for the below mentioned ID's */
+main #controllers .buttonholders .madeforspace {
+  width: 20%;
+}
+
+/* Setting relative width and font-size of those ID's [elements] mentioned below*/
+main #controllers .buttonholders #resetButton, main #controllers .buttonholders #stopButton, main #controllers .buttonholders #startButton {
+  width: 50%;
+  font-size: 1.2em;
+}
+
+
+/* 
+    Below section are setting particular background 
+    colors for each button's 
+*/
+main #controllers .buttonholders #resetButton {
+  background-color: rgba(48, 66, 150, 0.5);
+}
+
+main #controllers .buttonholders #stopButton {
+  background-color: rgba(121, 45, 22, 0.8);
+}
+
+main #controllers .buttonholders #startButton {
+  background-color: rgba(22, 121, 57, 0.8);
+}
+
+main #controllers .buttonholders #startButton :hover {
+  background-color: green;
+}
+
+main #controllers button {
+  background-color: #31214e;
+  color: white;
+  font-size: 1em;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid whitesmoke;
+  margin: 0px 20px;
+}
+
+/* 
+    Below section are setting particular background 
+    colors for each button's when mouse is over to it.
+*/
+#startButton:hover {
+  background-color: green !important;
+}
+
+#stopButton:hover{
+  background-color: red !important;
+}
+
+#resetButton:hover{
+  background-color: blueviolet !important;
+}
+
+/* 
+  Adding scale up and down animation effect when
+  mouse is over to the buttons and the header logo section.
+*/
+button:hover, header:hover {
+  transform: scale(110%);
+  transition: all 0.5s;
+}
+
+/* Below functions are, To handle different 
+screensizes for proper looking  */
+
+/* if screen size is less than 1100 pixels
+ the below functions will be applicable */
+@media screen and (max-width: 1100px) {
+
+  /* Adjustin main to fit to the size */
+  main {
+    width: 70%;
+  }
+  
+  /* Adjustin roundTimer to fit to the size */
+  .roundTimer {
+    min-width: 15%;
+    max-width: 15%;
+    max-height: 100px;
+    font-size: 0.8em;
+    min-height: 80px;
+  }
+}
+
+/*  if screen size is less than 700 pixels 
+the below functions will be applicable */
+@media screen and (max-width: 700px) {
+  /* Main container will take 100% of body looking and it will maintain minimum of 400 pixels */
+  main {
+    width: 100%;
+    min-width: 400px;
+  }
+
+  /* Those id's will occupy 95% of main container width to maintain its better look.   */
+  #dayYearHolder, #controllers, #timer {
+    min-width: 95%;
+    margin: 0px !important;
+    padding: 2%;
+  }
+
+  /* round clocks size maintainance if lower than 1100 pixels */
+  .roundTimer {
+    min-width: 15%;
+    max-width: 15%;
+    max-height: 100px;
+    font-size: 0.8em;
+    min-height: 80px;
+  }
+}
+
+/* End of file */

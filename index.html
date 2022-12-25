@@ -1,0 +1,128 @@
+<!-- 
+
+This model represents Sachin's Timer.
+This website is handling timer events with three major functions
+of start stop and reset activity. This is root file named index.html.
+If In case any issue please contact us through email.
+
+
+
+=====================================================================
+
+            -------------------------------------------------
+            |            Development Details :              |
+            -------------------------------------------------
+            |   Author : Sachayanthan V [ created By ]      |
+            |   Email : sachayanthan.v.1999@gmail.com       |
+            |   Date Modified : 24-Dec-2022                 |
+            -------------------------------------------------
+
+=====================================================================
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin's Timer</title>
+    <!-- Linked to Styling sheet for this page [./index.css] -->
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+<body>
+    
+
+    <Header>
+        Sachin's Timer website
+    </Header>
+
+    <!-- Main  -->
+    <main id="main" class="main">
+
+        <!-- Timer [sec , min, hour, & colon seperator] holder -->
+        <section id="timer" class="timer">
+
+
+            <!-- container has month and day counter to show it serperately from real time -->
+            <div id="dayYearHolder" class="dayYearHolder boxContainer">
+
+                <!-- Days container [Day timer and day header text] -->
+                <div id="yearContainer"     class="yearContainer roundTimer"   >
+                    <div id="yearTimer" class="yearTimer ActualTimer"> 00 </div>
+                    <h1 class="timeHeaders">Years</h1>
+                </div>
+                <!-- Colon seperator --><div class="colonSeperator" id="colonSeperator">:</div>
+                <div id="daysContainer"     class="daysContainer roundTimer"   >
+                    <div id="dayTimer" class="dayTimer ActualTimer"> 00 </div>
+                    <h1 class="timeHeaders">Days</h1>
+                </div>
+                
+            </div>
+
+            <!-- cotainer has minute , seconds and hour timer with its -->
+            <div id="secMinHourHolder" class="secMinHourHolder boxContainer">
+                <!-- Hours container [hour timer and hour header text] -->
+                <div id="hoursContainer"    class="hoursContainer roundTimer"  >
+                    <div id="hourTimer" class="hourTimer ActualTimer"> 00 </div>
+                    <h1 class="timeHeaders">Hours</h1>
+                </div>
+    
+                <!-- Colon seperator --><div class="colonSeperator" id="colonSeperator">:</div>
+                <!-- Minutes container [hour Minute and minute header text] -->
+                <div id="minutesContainer"  class="minutesContainer roundTimer">
+                    <div id="minuteTimer" class="minuteTimer ActualTimer"> 00 </div>
+                    <h1 class="timeHeaders">Minutes</h1>
+                </div>
+                
+                <!-- Colon seperator --><div class="colonSeperator" id="colonSeperator">:</div>
+                <!--  Seconds container  Second timer and Second header text] -->
+                <div id="secondsContainer"  class="secondsContainer roundTimer">
+                    <div id="secondTimer" class="secondTimer ActualTimer"> 00 </div>
+                    <h1 class="timeHeaders">Seconds</h1>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- Timer [reset, start, pause/stop] button holder named section as controllers -->
+        <section id="controllers" class="controllers">
+
+
+            <!-- buttonholder has to be used to hold the buttons in proper position -->
+
+            <div class="buttonholders">
+                <button id="startButton" value="startbtn" class="startButton"> Start </button> <!-- button to handled to start a time -->
+                <div class="madeforspace"></div> <!-- Dummy Division to make the space aling properly for button  -->
+                <div class="madeforspace"></div> <!-- Dummy Division to make the space aling properly for button  -->
+            </div>
+            <div class="buttonholders">
+                <div class="madeforspace"></div> <!-- Dummy Division to make the space aling properly for button  -->
+                <button id="stopButton"  value="stopbtn" class="stopButton" > Stop  </button> <!-- button to handled to stop a timer -->
+                <div class="madeforspace"></div> <!-- Dummy Division to make the space aling properly for button  -->
+            </div>
+            <div class="buttonholders">
+                <div class="madeforspace"></div> <!-- Dummy Division to make the space aling properly for button  -->
+                <div class="madeforspace"></div> <!-- Dummy Division to make the space aling properly for button  -->
+                <button id="resetButton" value="resetbtn" class="resetButton"> Reset </button> <!-- button to handled to reset a timee to zero -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+</body>
+
+    <!-- handling timer events and functionalities through this js file [./index.js] -->
+    <script src="./index.js"></script>
+
+</html>
+
+<!--  End of file  -->
